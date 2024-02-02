@@ -32,13 +32,12 @@ function App() {
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div>
 
-
           {user ? (
             <>
               <NavBar />
 
               <Routes>
-                <Route path="/" element={<MainPage />} />
+                <Route path="/about" element={<h3>About</h3>} />
                 <Route
                   path="/movies"
                   element={<MoviesList movies={movies} />}
@@ -49,8 +48,6 @@ function App() {
           ) : (
             <MainPage />
           )}
-
-          
         </div>
       </ThemeContext.Provider>
     </UserContext.Provider>
